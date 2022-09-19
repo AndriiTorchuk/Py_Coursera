@@ -28,3 +28,30 @@ while True:
         continue
      
 print ("We finished ", "Sum =", sum, "Average =", sum/count)
+
+
+#Exercise 2: Write another program that prompts for a list of numbers
+#as above and at the end prints out both the maximum and minimum of
+#the numbers instead of the average.
+print("============================================")
+lis = []
+
+while True:
+    inp = input ("Enter number: ")
+    if inp == 'done':
+        break
+    try:
+        inp = int(inp)
+        lis.append(inp)
+        
+    except:
+        print("Only numbers, please")
+        continue
+
+print("List of numbers is: ", lis)
+
+larg = lis[0]
+for i in lis:
+    if i > larg:
+        larg = i
+print("Largest numver is: ", larg)
